@@ -1,20 +1,21 @@
 {
   "name": "propertyadviser-com",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "api": "node server/index.js",
-    "check": "node --check server/index.js"
+    "check": "node --check server/index.js && node --check server/db.js && node --check server/auth.js"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
     "vite": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "pg": "^8.16.3"
   },
   "devDependencies": {}
 }
